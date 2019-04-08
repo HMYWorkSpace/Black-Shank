@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/lib/require.js" data-main="/js/index.js"></script>
+    <link rel="stylesheet" href="/lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+</head>
+<body>
+        <header id="header-content" class="header-content"></header>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="" class="a1"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="" class="a2"></a>
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <section class="advert" id="advert">
+            <!-- <a href="javascript:;">
+                <div class="img-content">
+                    <img src="/img/index-advert-3.jpg" alt="">
+                </div>
+                <div class="text-content"> 
+                    <span></span>    
+                </div>
+                <h4>我是谁我在哪</h4>
+            </a>
+            <a href="javascript:;">
+                <div class="img-content">
+                    <img src="/img/index-advert-3.jpg" alt="">
+                </div>
+                <div class="text-content">
+                    <p>我是谁我在哪</p>
+                    <p>我是谁我在哪</p>
+                </div>
+            </a>
+            <a href="javascript:;">
+                <div class="img-content">
+                    <img src="/img/index-advert-3.jpg" alt="">
+                </div>
+                <div class="text-content">
+                    <p>我是谁我在哪</p>
+                    <p>我是谁我在哪</p>
+                </div>
+            </a> -->
+        </section>
+        <footer>
+            <div class="foot">
+                <a href="">云服务</a>
+                <div class="copy-border"></div>
+                <a href="">黑鲨投屏</a>
+                <div class="copy-border"></div>
+                <a href="">预置应用公示</a>
+                <div class="copy-border"></div>
+                <a href="">关于我们aaqq</a>
+                <p>400-015-8899</p>
+                <div class="serve-time">
+                    热线服务时间:  09:00~24:00
+                </div>
+            </div>
+            <div class="foot-foot">
+                <p>Copyright © 2017-2018 BlackShark 赣ICP备17012659号. All Rights Reserved.</p>
+                <div class="foot-right">
+                    <span>关注我们&nbsp;:</span>
+                    <a href=""><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+                    <a href=""><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+                </div>
+            </div>
+        </footer>
+        <script type="text/html" id="advert-list">
+            {{each list item}}
+            <a href="javascript:;">
+                <div class="img-content">
+                    <img src="{{item.img}}" alt="">
+                </div>
+                <div class="text-content">
+                    <p>{{item.title}}</p>
+                    <p>{{item.title}}</p>
+                </div>
+            </a>
+            {{/each}}
+        </script>
+</body>
+</html>

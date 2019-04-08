@@ -1,0 +1,84 @@
+@import "style";
+main{
+    height: 680px;
+    width: 100%;
+    background: url(/img/login-main-bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+section{
+    height: 680px;
+    width: 1200px;
+    margin: 0 auto;
+}
+main .login-form{
+    width: 433px;
+    height: 500px;
+    float: right;
+    margin-top: 72px;
+    background: white;
+}
+main .login-form h3{
+    text-align: center;
+    margin-bottom: 30px;
+}
+main .login-form form{
+    width: 365px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+main .login-form form input{
+    height: 63px;
+    width: 363px;
+    border: none;
+    border: 1px solid #999999;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+main .login-form form input:nth-child(2){
+    margin-bottom: 50px;
+}
+main .login-form form button{
+    width: 365px;
+    height: 65px;
+    border: none;
+    border-radius: 2px;
+    background: #00c03c;
+    color: white;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+main .login-form form p{
+    text-align: right;
+}
+main .login-form form p a{
+    color: #999999;
+}
+main .login-form .login-other{
+    width: 170px;
+    margin: 0 auto;
+}
+main .login-form .login-other h4{
+    text-align: center;
+    font-size: 12px;
+    color: #999999;
+    margin-bottom: 20px;
+}
+main .login-form .login-other p{
+    display: flex;
+    justify-content: space-between;
+}
+main .login-form .login-other p span{
+    font-size: 28px !important;
+}
+footer{
+    height: 60px;
+    width: 1200px;
+    margin: 0 auto;
+}
+footer p{
+    text-align: center;
+    line-height: 60px;
+    color: #999999;
+    font-size: 13px;
+}

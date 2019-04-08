@@ -1,0 +1,306 @@
+main{
+    width: 100%;
+}
+main .shop-detail{
+    width: 100%;
+    height: 783px;
+    border-bottom: 1px solid #999999;
+}
+main .shop-detail .message-detail{
+    width: 1200px;
+    height: 783px;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+main .shop-detail .message-detail .d-left{
+    width: 490px;
+    height: 590px;
+    position: relative;
+    float: left;
+    .view_bd {
+        width: 490px;
+        height: 490px;
+        border: 1px solid purple;
+        img{
+            width: 488px;
+            height: 488px;
+        }
+    }
+    .view_thumbs{
+        width: 100%;
+        height: 100px;
+        ul{
+            width: 440px;
+            height: 100px;
+            margin: 0 auto;
+            li{                      
+                float: left;
+                margin-right:8px;
+                width: 80px;
+                height: 100px;
+                border: 1px solid;
+            }
+            .s{
+                width: 78px;
+                height: 98px;
+            }
+        }
+    }
+}
+main .shop-detail .message-detail .right-detail{
+    width: 620px;
+    height: 643px;
+    float: right;
+}
+main .shop-detail .message-detail .right-detail h3{
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+main .shop-detail .message-detail .right-detail>a{
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+main .shop-detail .message-detail .right-detail>p:nth-child(2){
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+main .shop-detail .message-detail .right-detail>p:nth-child(3){
+    font-size: 12px;
+    color: #00c03c;
+    margin-bottom: 10px;
+}
+main .shop-detail .message-detail .right-detail>p:nth-child(4){
+    margin-bottom: 15px;
+}
+main .shop-detail .message-detail .right-detail>p:nth-child(4) i{
+    font-size: 15px;
+    font-style: normal;
+    text-decoration: line-through;
+}
+main .shop-detail .message-detail .right-detail>p:nth-child(4) b{
+    font-size: 23px;
+    color: #00c03c;
+}
+main .shop-detail .message-detail .right-detail .shop-active{
+    background: #f8f8f8;
+    border-radius: 5px;
+}
+main .shop-detail .message-detail .right-detail .shop-active p{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+main .shop-detail .message-detail .right-detail .shop-active i{
+    display:block;
+    width: 36px;
+    height: 23px;
+    background: black;
+    text-align: center;
+    line-height: 23px;
+    color: #f8f8f8;
+    font-style: normal;
+    margin: 0 15px;
+}
+main .shop-detail .message-detail .right-detail .shop-choose {
+    span{
+        display: block;
+        width: 148px;
+        float: left;
+        line-height: 40px;
+        text-align: center;
+        border: 1px solid #999999;
+        border-radius: 3px;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        cursor: pointer;
+        transition: all 1s;
+       
+    }
+    .active{
+        border: 1px solid #00c03c;
+    }
+}
+
+main .shop-detail .message-detail .right-detail .shop-choose span:hover{
+    border: 1px solid #00c03c;
+}
+main .shop-detail .message-detail .right-detail .shop-choose .every{
+    display: flex;
+    margin-bottom: 20px;
+}
+main .shop-detail .message-detail .right-detail .shop-choose .every em{
+    float: left;
+    width: 70px;
+    height: 42px;
+    line-height: 42px;
+    font-style: normal;
+}
+main .shop-detail .message-detail .right-detail .shop-choose .every .num{
+    float: left;
+    width: 540px;
+}
+main .shop-detail .message-detail .right-detail .shop-choose .number .num button{
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 40px;
+    background: white;
+}
+main .shop-detail .message-detail .right-detail .shop-choose .number .num span{
+    display: flex;
+    justify-content: space-between;
+}
+main .shop-detail .message-detail .right-detail .addshop button{
+    height: 52px;
+    width: 170px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: black;
+    margin-right: 20px;
+    color: white;
+}
+main .shop-detail .message-detail .right-detail .addshop button:nth-child(2){
+    background: #00c03c;
+}
+main .shop-detail .message-detail .right-detail .modal-content{
+    height: 162px;
+    width: 310px;
+    position: absolute;
+    .modal-header{
+        margin-bottom: 30px;
+        border-bottom: none;
+        h4{
+            text-align: center;
+        }
+    }
+    .modal-footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: none;
+        button{
+            height: 30px;
+            width: 120px;
+            margin-right: 0;
+        }
+    }
+}
+.product-message{
+    width: 100%;
+    .detail-nav{
+        width: 1200px;
+        height: 80px;
+        margin: 0 auto;
+        ul{
+            height: 80px;
+            width: 440px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            li{
+                line-height: 40px;
+                color: #999999;
+                cursor: pointer;
+            }
+            & .ac::after{
+                content: "";
+                display: block;
+                width: 40px;
+                height: 1px;
+                background: black;
+                margin: 0 auto;
+            }
+        }
+    }
+    .specific-content{
+        width: 100%;
+        background: #999999;
+        overflow: hidden;
+        .product-detail{
+            width: 100%;
+            display: none;
+            img{
+                height: 920px;
+                width: 100%;
+            }
+        }
+        .product-parameter{
+            width: 1200px;
+            margin: 80px auto;
+            background: white;
+            display: none;
+            padding: 100px 0;
+            h2{
+                width: 962px;
+                height: 42px;
+                margin: 0 auto;
+                text-align: center;
+                line-height: 42px;
+                margin-bottom: 10px;
+            }
+            .user-rating{
+                width: 962px;
+                margin: 0 auto;
+                .user-item{
+                    height: 240px;
+                    width: 100%;
+                    border-bottom: 1px solid;
+                    padding: 70px 0;
+                    .item-left{
+                        width: 155px;
+                        height: 36px;
+                        float: left;
+                        line-height: 36px;
+                        display: flex;
+                        align-items: center;
+                        span{
+                            display: inline-block;
+                            width: 36px;
+                            height: 36px;
+                            border-radius: 50%;
+                            background: #999999;
+                            overflow:hidden;
+                            img{
+                                width: 100%;
+                                height:100%;
+                            }
+                        }
+                    }
+                    .item-right{
+                        width: 806px;
+                        height: 99px;
+                        float: left;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        p:nth-child(3),p:nth-child(4){
+                            font-size: 12px;
+                            color: #999999;
+                            i{
+                                font-style: normal;
+                            }
+                        }
+                    }
+                }
+            }
+            .page-nav{
+                width: 962px;
+                margin: 0 auto;
+                ul{
+                    float: right;
+                }
+            }
+        }
+        .product-evaluate{
+            width: 100%;
+            height: 1000px;
+            background: red;
+            display: none;
+        }
+        & .ac{
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@import "style";
+.d-left{
+    width: 410px;
+    height: 486px;
+    position: relative;
+    float: left;
+    .view_bd {
+        width: 380px;
+        height: 380px;
+        margin: 20px auto 0;
+        img{
+            width: 380px;
+            height: 380px;
+        }
+    }
+    .view_thumbs{
+        width: 100%;
+        height: 86px;
+        ul{
+            width: 256px;
+            height: 56px;
+            padding: 15px 0;
+            margin: 0 auto;
+            li{                      
+                float: left;
+                margin: 0 4px;
+                width: 54px;
+                height: 54px;
+            }
+            .s{
+                width: 52px;
+                height: 52px;
+            }
+        }
+    }
+}

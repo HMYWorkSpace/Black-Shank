@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/lib/swiper/css/swiper.css">
+    <link rel="stylesheet" href="/css/shoplist.css">
+</head>
+<body>
+    <header id="header-content" class="header-content"></header>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="" class="a1"></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="" class="a2"></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="" class="a3"></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="" class="a4"></a>
+            </div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <main>
+        <section class="shop-list">
+            <div class="list">
+                <h3>新品抢购</h3>
+                <ul id="new-list">
+                </ul>
+            </div>
+            <div class="list">
+                <h3>黑鲨游戏手机</h3>
+                <ul id="phone-list">
+            </div>
+            <div class="list">
+                <h3>黑鲨游戏手柄</h3>
+                <ul id="hand-shank-list">
+            </div>
+            <div class="list">
+                <h3>黑鲨游戏手机壳/模</h3>
+                <ul id="model-list">
+            </div>
+            <div class="list">
+                <h3>黑鲨游戏耳机/适配器/数据线</h3>
+                <ul id="data-wire-list">
+            </div>
+        </section>
+    </main> 
+    <footer id="footer-content"></footer>
+    <script type="text/html" id="shoplist">
+        {{each list item}}
+            <li>
+                <a href="/html/shopdetails.html?id={{item.id}}">
+                    <img src="{{item.img}}" alt="">
+                    <p>{{item.title}}</p>
+                    <p>{{item.details}}</p>
+                    <p><b>￥</b>{{item.price}}</p>
+                    <span>新品</span>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="phonelist">
+        {{each list item}}
+            <li>
+                <a href="/html/shopdetails.html?id={{item.id}}">
+                    <img src="{{item.img}}" alt="">
+                    <p>{{item.title}}</p>
+                    <p>{{item.details}}</p>
+                    <p><b>￥</b>{{item.price}}</p>
+                    <span>新品</span>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="shanklist">
+        {{each list item}}
+            <li>
+                <a href="/html/shopdetails.html?id={{item.id}}">
+                    <img src="{{item.img}}" alt="">
+                    <p>{{item.title}}</p>
+                    <p>{{item.details}}</p>
+                    <p><b>￥</b>{{item.price}}</p>
+                    <span>新品</span>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="modellist">
+        {{each list item}}
+            <li>
+                <a href="/html/shopdetails.html?id={{item.id}}">
+                    <img src="{{item.img}}" alt="">
+                    <p>{{item.title}}</p>
+                    <p>{{item.details}}</p>
+                    <p><b>￥</b>{{item.price}}</p>
+                    <span>新品</span>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="datalist">
+        {{each list item}}
+            <li>
+                <a href="/html/shopdetails.html?id={{item.id}}">
+                    <img src="{{item.img}}" alt="">
+                    <p>{{item.title}}</p>
+                    <p>{{item.details}}</p>
+                    <p><b>￥</b>{{item.price}}</p>
+                    <span>新品</span>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+    <script src="/lib/require.js" data-main="/js/shoplist.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+@import "style";
+.head{
+    min-width: 1200px;
+    height: 60px;
+    background: black; 
+}
+.head .content{
+    width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.head .content .logo{
+    display: block;
+    height: 60px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.head .content .logo img{
+    height: 26px;
+    width: 26px;
+}
+.head .content .logo span{
+    color: #00ec00;
+    font-size: 14px;
+}
+.head .content ul{
+    display: flex;
+}
+.head .content ul li{
+    margin-right: 60px;
+}
+.head .content ul li:last-child{
+    margin-right: 0;
+}
+.head .content ul li a{
+    color:white;
+    font-size: 14px;
+    display: block;
+    line-height: 60px;
+}
+.head .content ul li:hover a{
+    color: #00ec00;
+    text-decoration: none;
+}
+.head .content ol{
+    display: flex;
+    align-items: center;
+}
+.head .content ol li a span{
+    font-size: 20px !important;
+    color: white;
+}
+.head .content ol li:nth-child(1) a span{
+    margin-right: 25px;
+}
+.head .content ol li:hover span{
+    color: #00ec00;
+}

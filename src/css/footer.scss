@@ -1,0 +1,84 @@
+@import "style";
+.foot{
+    height: 416px;
+    width: 1074px;
+    margin: 0 auto;
+}
+.foot ul{
+    height: 164px;
+    width: 1074px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #999999;
+}
+.foot ul li{
+    padding: 50px 0;
+    height: 164px;
+    width: 358px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: #999999;
+}
+.foot ul li span{
+    font-size: 30px !important;
+}
+.foot .foot-dl{
+    width: 1074px;
+    height: 185px;
+    margin: 0 auto;
+    border-bottom: 1px solid #999999;
+    display: flex;
+    align-items: center;
+}
+.foot .foot-dl a{
+    color: #999999;
+}
+.foot .foot-dl a:hover{
+    text-decoration:none;
+    color: #00ec00;
+}
+.foot .foot-dl dl{
+    margin-left: 280px;
+}
+.foot .foot-dl dt{
+    margin-bottom: 25px;
+}
+.foot .foot-dl dd{
+    line-height: 24px;
+    font-size: 12px;
+    color: #999999;
+}
+.foot .foot-dl dl:nth-child(2) dd:nth-child(2){
+    font-size: 30px;
+    color: black;
+}
+.foot .foot-bottom{
+    width: 1074px;
+    height: 58px;
+    margin: 0 auto;
+    display: flex;
+    font-size: 12px;
+    color: #999999;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.foot .foot-bottom .foot-right a:nth-child(2){
+    margin: 0 15px;
+}
+.foot .foot-bottom .foot-none{
+    display: flex;
+    height: 108px;
+    width: 234px;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 14px;
+    color: #999999;
+    border: 1px solid #999999;
+    position: absolute;
+    top:-110px;
+    right: 0;
+    display: none;
+}

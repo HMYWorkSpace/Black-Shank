@@ -1,0 +1,147 @@
+@import "style";
+.header-content{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+}
+.swiper-container{
+    width: 100%;
+    height: 680px;
+}
+.swiper-container .a1{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(/img/index-banner-01.jpg) no-repeat center center;
+    background-size: cover;
+}
+.swiper-container .a2{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(/img/index-banner-02.jpg) no-repeat center center;
+    background-size: cover;
+}
+.swiper-pagination-bullet{
+    background: white;
+}
+.swiper-pagination-bullet-active{
+    background: #00c03c;
+}
+.advert{
+    width: 100%;
+    height: 243px;
+    display: flex;
+    justify-content: space-between;
+    background: black;
+}
+.advert a{
+    display: block;
+    width: 33.2%;
+    height: 243px;
+    position: relative;
+    overflow: hidden;
+}
+.advert a>div{
+    width: 100%;
+    text-align: center;
+    z-index: 500;
+}
+.advert a>h4{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    text-align: center;
+    color: white;
+}
+.advert a .text-content span{
+    display: block;
+    height: 60px;
+    width: 60px;
+    margin: 0 auto;
+    border: 1px solid white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+}
+.advert a .text-content span::after{
+    font-family: "iconfont";
+    content: "\e60e";
+    font-size: 19px;
+    margin-left: 3px;
+}
+.advert a .text-content{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    color: white;
+}
+.advert a .text-content p:nth-child(1){
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+.advert a .text-content p:nth-child(2){
+    font-size: 12px;
+}
+.advert a .img-content{
+    width: 100%;
+    height: 100%;
+}
+.advert a .img-content img{
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease 0s;
+}
+.advert a:hover img{
+    transform: scale(1.1);
+}
+footer{
+    width: 100%;
+    height: 207px;
+    padding-top:50px;
+    background:black;
+}
+footer .foot{
+    height: 84px;
+    width: 1200px;
+    margin: 0 auto;
+}
+footer .foot a{
+    float: left;
+    line-height: 16px;
+    color: white;
+}
+footer .foot .copy-border{
+    height: 14px;
+    width: 1px;
+    float: left;
+    background: #999999;
+    margin: 1px 25px 0;
+}
+footer .foot p{
+    font-size: 30px;
+    float: right;
+    color: #00c03c;
+    margin-top: 10px;
+}
+footer .foot .serve-time{
+    color: #999999;
+    clear: both;
+    text-align: right;
+}
+footer .foot-foot{
+    width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    border-top: 1px solid #999999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+footer .foot-foot .foot-right a:nth-child(2){
+    margin: 0 10px 0 30px;
+}
+

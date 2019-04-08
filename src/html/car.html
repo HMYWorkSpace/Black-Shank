@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/car.css">
+</head>
+<body>
+    <header id="header-content"></header>
+    <main>
+        <!-- <div class="car-content">
+            <p>购物车竟然是空的,快去添加吧</p>
+            <a href="/html/shoplist.html">去商城</a>
+        </div> -->
+        <div class="show-car">
+           <div class="chopper">
+                <h4>我的购物车</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                <input type="checkbox" class="allcheck" id="allcheck">
+                                <label for="allcheck" class="special">
+                                    <span class="all-state"></span>
+                                    <b>全选</b>
+                                </label>
+                            </th>
+                            <th>商品名称</th>
+                            <th>数量</th>
+                            <th>单价</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        <!-- <tr>
+                            <td>
+                                <input type="checkbox" class="check" id="check-0">
+                                <label for="check-0">
+                                    <span class="choose-state"></span>
+                                </label>
+                            </td>
+                            <td class="need-dis">
+                                <div class="left-img">
+                                    <img src="/img/5.jpg" alt="">
+                                </div>
+                                <div class="right-name">
+                                    <p>我在哪</p>
+                                    <p>我是谁我要干什么</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="buy-num">       
+                                    <button>-</button>
+                                    <i>1</i>
+                                    <button>+</button>
+                                </div>
+                            </td>
+                            <td><i>￥3799</i></td>
+                            <td>待付款</td>
+                            <td>
+                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" class="check" id="check-1">
+                                <label for="check-1">
+                                    <span class="choose-state"></span>
+                                </label>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr> -->
+                    </tbody>
+                </table>
+                <div class="modal-center" id="modal-center">
+                    <p>确定删除商品?</p>
+                    <div>
+                        <button id="ok-btn">确定</button>
+                        <button id="cel-btn">在想想</button>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </main>
+    <footer id="footer-content"></footer>
+    <script src="/lib/require.js" data-main="/js/car.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+@import "style";
+body{
+    background: #f4f4f4 !important;
+}
+main{
+    width: 1200px;
+    height: 720px;
+    background: #ffffff;
+    margin: 70px auto 0;
+    padding-top:40px; 
+}
+main .register-form{
+    height: 660px;
+    width: 450px;
+    margin: 0 auto;
+}
+main .register-form h3{
+    text-align: center;
+    margin-bottom: 50px;
+}
+main .register-form form input{
+    height: 63px;
+    width: 448px;
+    border: none;
+    border: 1px solid #999999;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+main .register-form form input:nth-child(2){
+    width: 262px;
+}
+main .register-form form button{
+    width: 160px;
+    height: 65px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 22px;
+    background: #00c03c;
+    color: white;
+}
+main .register-form form a{
+    display: block;
+    text-align: right;
+    color: #999999;
+    margin-bottom: 30px;
+}
+main .register-form form .reg-btn{
+    width: 450px;
+    margin: 0;
+    border-radius: 2px;
+    margin-bottom: 30px;
+}
+main .register-form form p{
+    display: flex;
+    align-items: center;
+}
+main .register-form form input[type="checkbox"]{
+    height: 16px;
+    width: 16px;
+    margin: 0;
+}
+main .register-form form span{
+    font-size: 13px;
+    color: #999999;
+    display: block;
+    height: 16px;
+    margin-left: 5px;
+}
+footer{
+    height: 60px;
+    width: 1200px;
+    margin: 0 auto;
+}
+footer p{
+    text-align: center;
+    line-height: 60px;
+    color: #999999;
+    font-size: 13px;
+}

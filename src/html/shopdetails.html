@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.3">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/shopdetails.css">
+</head>
+
+<body>
+    <header id="header-content"></header>
+    <!-- 头部  外部的引入 -->
+    <main>
+        <div class="shop-detail" id="shop-detail">
+            <!-- 商品的详情 用的假数据 -->
+        </div>
+        <!-- 商品的介绍和用户的评价 -->
+        <div class="product-message">
+            <div class="detail-nav">
+                <ul id="change-btn">
+                    <li class="ac">产品详情</li>
+                    <li>产品评价</li>
+                    <li>产品参数</li>
+                </ul>
+            </div>
+            <!-- 导航 -->
+            <div class="specific-content" id="specific-content">
+                <div class="product-detail ac" id="product-detail"></div>
+                <div class="product-parameter" id="product-parameter">
+                    <h2>产品评价</h2>
+                    <div class="user-rating" id="user-rating">
+                        <!-- 外部请求的数据 -->
+                    </div>
+                    <nav aria-label="Page navigation" class="page-nav">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">上一页</span>
+                                </a>
+                            </li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">下一页</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="product-evaluate"></div>
+            </div>
+            <!-- 详情 -->
+        </div>
+    </main>
+    <footer id="footer-content"></footer>
+    <!-- 尾部 -->
+    <script type="text/html" id="shopdetail">
+        <div class="message-detail">
+            <div class="d-left">
+                <div class="view_bd">
+                    <img class="zoom-img" src="{{imglist[0]}}"
+                        data-zoom-image="{{imglist[0]}}"/>
+                </div>
+                <div class="view_thumbs" id="gal1">
+                    <ul class="view-ul">
+                        <li class="current">
+                            <a href="javascript:;" data-image="{{imglist[0]}}"
+                                data-zoom-image="{{imglist[0]}}">
+                                <img class="s" src="{{imglist[0]}}"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" data-image="{{imglist[1]}}"
+                                data-zoom-image="{{imglist[1]}}">
+                                <img class="s" src="{{imglist[1]}}"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" data-image="{{imglist[2]}}"
+                                data-zoom-image="{{imglist[2]}}">
+                                <img class="s" src="{{imglist[2]}}"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" data-image="{{imglist[3]}}"
+                                data-zoom-image="{{imglist[3]}}">
+                                <img class="s" src="{{imglist[3]}}"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" data-image="{{imglist[4]}}"
+                                data-zoom-image="{{imglist[4]}}">
+                                <img class="s" src="{{imglist[4]}}"/>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+             <!-- 右侧商品的介绍和样式的选择 -->
+            <div class="right-detail">
+                <h3><span>{{title}}</span>&nbsp;<span>{{version[0]}}</span>&nbsp;<span>{{color[0]}}</span></h3>
+                <p>{{details}}</p>
+                <p>【{{sale}}】{{title}}</p>
+                <p><i>￥{{price.oldprice}}</i><b id="price-now">￥{{price.nowprice}}</b></p>
+                <div class="shop-active">
+                    <p><i>赠品</i>{{active[0]}}</p>
+                    <p><i>减价</i>{{active[1]}}</p>
+                </div>
+                <a href="">以旧换新</a>
+                <!-- 开始选择商品的样式 -->
+                <div class="shop-choose">
+                    <div class="version every">
+                        <em>版&nbsp;&nbsp;&nbsp;&nbsp;本</em>
+                        <div class="num version">
+                            <span class="active">{{version[0]}}</span><span>{{version[1]}}</span><span>{{version[2]}}</span><span>{{version[3]}}</span>
+                        </div>
+                    </div>
+                    <!-- 选择商品的版本 -->
+                    <div class="color every">
+                        <em>颜&nbsp;&nbsp;&nbsp;&nbsp;色</em>
+                        <div class="num color">
+                            <span class="active">{{color[0]}}</span><span>{{color[1]}}</span>
+                        </div>
+                    </div>
+                    <!-- 选择商品颜色 -->
+                    <div class="number every">
+                        <em>数&nbsp;&nbsp;&nbsp;&nbsp;量</em>
+                        <div class="num">                             
+                            <span>
+                            <button id="minus-num">-</button>
+                            <i id="goods-num">1</i>
+                            <button id="add-num">+</button>
+                            </span>
+                        </div>  
+                    </div>
+                    <!-- 选择商品数量 -->
+                </div>
+                <!-- 结束选择商品的样式 -->
+
+                <!-- 加入购物车的按钮 -->
+                <div class="addshop">
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="add-car">
+                            加入购物车
+                        </button>
+                    <button id="now-buy">立即购买</button>
+                        <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="myModalLabel">添加成功!</h4>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">继续购物</button>
+                                    <button type="button" class="btn btn-primary" id="go-car">购物车结算</button>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+       </div>
+  </div>
+</script>
+    <script type="text/html" id="detailimage">
+    {{each list item}}
+    <img src="{{item}}" alt="">
+    {{/each}}
+</script>
+    <script type="text/html" id="userrating">
+    {{each list item}}
+        <div class="user-item">
+            <div class="item-left">
+                <span>
+                    <img src="{{item.img}}" alt="">
+                </span>
+                <i>{{item.name}}</i>
+            </div>
+            <div class="item-right">
+                <p>
+                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                </p>
+                <p>{{item.rating}}</p>
+                <p><span>{{item.version}}&nbsp;&nbsp;{{item.color}}</span><i>{{item.time}}</i></p>
+                <p>追加评论:{{item.add}}<span></span></p>
+            </div>
+        </div>
+    {{/each}}
+</script>
+    <script src="/lib/require.js" data-main="/js/shopdetails.js"></script>
+</body>
+
+</html>
