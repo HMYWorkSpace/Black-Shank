@@ -1,20 +1,22 @@
 require(["require.config"],function(){
-    require(["jquery","header","footer","url","template","swiper"],function($,header,footer,url,template,Swiper){
+    require(["jquery","header","footer","url","template","swiper","FlyToCar"],function($,header,footer,url,template,Swiper,fly){
         header.init().then(function(){
             $(".head").attr("style",'background:rgba(0,0,0,0)');
             // 让头部的背景颜色变成透明的
         });
         class Shoplist{
             constructor(){
+                this.buynum=$("#buy-num");
                 this.goodslist();
                 this.lunbo();
+                this.addcar();
             }
             goodslist(){
                 $.ajax({
                     url:url.baseUrl+"product",
                     method:"GET",
                     dataType:"json",
-                    success:function(res){
+                    success:res=>{
                        if(res.res_code===1){
                            let list=res.res_body.list;
                            var html=template("shoplist",{list});
@@ -41,9 +43,7 @@ require(["require.config"],function(){
                     success:function(res){
                        if(res.res_code===1){
                            let list=res.res_body.list;
-                           console.log(list);
                            var html=template("shanklist",{list});
-                           console.log(html);
                            $("#hand-shank-list").html(html);
                         }          
                     }       
@@ -55,9 +55,7 @@ require(["require.config"],function(){
                     success:function(res){
                        if(res.res_code===1){
                            let list=res.res_body.list;
-                           console.log(list);
                            var html=template("modellist",{list});
-                           console.log(html);
                            $("#model-list").html(html);
                         }          
                     }       
@@ -69,9 +67,7 @@ require(["require.config"],function(){
                     success:function(res){
                        if(res.res_code===1){
                            let list=res.res_body.list;
-                           console.log(list);
                            var html=template("datalist",{list});
-                           console.log(html);
                            $("#data-wire-list").html(html);
                         }          
                     }       
@@ -90,6 +86,9 @@ require(["require.config"],function(){
                   // 如果为true时点击分页器按钮可以切换 false不能切换
                 },
               })       
+            }
+            addcar(){
+                fly($("#new-list"),".join-car",this.buynum);
             }
         }
         new Shoplist();

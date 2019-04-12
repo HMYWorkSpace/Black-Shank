@@ -9,6 +9,8 @@ require.config({
 		"swiper" : "lib/swiper/js/swiper",
 		"zoom":"lib/jquery-plugins/jquery.elevateZoom-3.0.8.min",
 		"bootstrap":"lib/bootstrap/js/bootstrap.min",
+		"fly":"lib/jquery-plugins/jquery.fly.min",
+		"FlyToCar":"js/module/FlyToCar",
 	},
 	// 垫片，不满足AMD规范的模块，但是又依赖于另外的模块
 	shim : {
@@ -16,6 +18,9 @@ require.config({
 			deps: ["jquery"]
 		},
 		"bootstrap":{
+			deps:["jquery"]
+		},
+		"fly":{
 			deps:["jquery"]
 		},
 	}

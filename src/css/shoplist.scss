@@ -42,6 +42,31 @@
 .swiper-pagination-bullet-active{
     background: #00c03c;
 }
+.fixed-car{
+    width: 50px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span{
+        font-size: 50px !important;
+        color: #00c03c
+    }
+    b{
+        display: block;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background: #00c03c;
+        color: white;
+        font-size: 30px;
+        line-height: 40px;
+        text-align: center;
+    }
+}
 main{
     width: 100%;
     background: #f4f4f4;
@@ -71,11 +96,12 @@ main .shop-list .list ul li{
     width: 25%;
     padding: 5px;
     height: 100%;
+    overflow: hidden;
 }
 main .shop-list .list ul li a{
     display: block;
     width: 258px;
-    height: 326px;
+    height: 286px;
     background: white;
     text-align: center;
     padding-top: 40px;
@@ -103,4 +129,13 @@ main .shop-list .list ul li a span{
     font-size: 12px;
     left: 13px;
     top: 13px;
+}
+main .shop-list .list ul li button{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    background: #00c03c;
+    color:white;
+    font-size: 18px;
 }

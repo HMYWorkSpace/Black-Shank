@@ -5,13 +5,14 @@ require(["require.config"], function () {
         class Shopdetail {
             constructor() {
                 this.id=Number(location.search.slice(4));
-                console.log(this.id);
                 this.detail();
                 this.detailchange();
+                this.promise();
+                this.paging();
             }
             // 请求数据详情的
             detail() {
-                // 这个请求的时上面商品参数详情的
+                // 这个请求的是上面商品参数详情的
                 $.ajax({
                     url: url.baseUrl + "shop/detail",
                     method: "GET",
@@ -22,29 +23,110 @@ require(["require.config"], function () {
                         }
                     }
                 })
-                // 这个请求是商品的详情和用户的评价和商品详细参数的
+                // 这个请求是商品的详情图片的
                 $.ajax({
                     url:url.baseUrl+"detail/image",
                     method:"GET",
                     dataType:"json",
                     success:res=>{
                         if(res.res_code===1){
-                            // var list=res.res_body.data.image;
-                            // console.log(list);
                             this.rendertwo(res.res_body.data.image);
                         }
                     }
                 })
-                $.ajax({
-                    url:url.baseUrl+"user/rating",
-                    method:"GET",
-                    dataType:"json",
-                    success:res=>{
-                        if(res.res_code===1){
-                          this.renderthree(res.res_body.data)
-                          console.log(res.res_body.data)
+            }
+            promise(){
+                // 请求的是用户的评价 许下承诺是为了后面分页用的
+                var _this=this;
+                return new Promise(function(resolve,reject){
+                    $.ajax({
+                        url:url.baseUrl+"user/rating",
+                        method:"GET",
+                        dataType:"json",
+                        success:res=>{
+                            if(res.res_code===1){
+                              var arr1=res.res_body.data;
+                              var arr2=[];
+                                arr1.forEach(function(item,index){
+                                    if(item.id<=10){
+                                        arr2.push(item);
+                                    }
+                                })
+                              _this.renderthree(arr2)
+                              resolve(arr1);
+                            }
+                        }
+                    })
+                })
+            }
+            // 分页的点击事件
+            paging(){
+                var _this=this;
+                this.promise().then(function(arr){
+                    var pageItem=10;
+                    //   pageItem是每页显示的条数
+                    var pageNum=Math.ceil(arr.length/pageItem);
+                    //   pageNum是总的页数
+                    for(var i=1;i<=pageNum;i++){
+                        // 循环是根据计算的总的页数生成几个点击的按钮
+                        if(i===1){
+                            // 进入页面第一页的class为active
+                            $(`<li class="click-page active"><a href=""javascript:; class="page">${i}</a></li>`).insertBefore($("#next-page"))
+                        }else{
+                            $(`<li class="click-page"><a href=""javascript:; class="page">${i}</a></li>`).insertBefore($("#next-page"))
                         }
                     }
+                    var nowPage=Number($(".active").children().html());
+                    $("#pagination").click(function(event){
+                        var $target=$(event.target);
+                        if($target.is(".page")){
+                            // 点击当前页的事件
+                            $(".click-page").each(function(){
+                                $(this).removeClass("active")
+                            })
+                            $target.parent().addClass("active");
+                            nowPage=Number($target.html());
+                            console.log(nowPage);
+                            var arr3=[];
+                            arr.forEach(function(item){
+                                if(item.id>(nowPage-1)*pageItem && item.id<=nowPage*pageItem){
+                                    arr3.push(item);
+                                }
+                            })
+                            _this.renderthree(arr3);
+                            return false;
+                        }else if($target.is(".next")){
+                            // 点击下一个的事件
+                            $(".click-page").each(function(){
+                                $(this).removeClass("active")
+                            })
+                            console.log(nowPage);
+                            if(++nowPage>pageNum) nowPage=pageNum;
+                            console.log(nowPage);
+                            $(".click-page").eq(nowPage-1).addClass("active")
+                            var arr4=[];
+                            arr.forEach(function(item){
+                                if(item.id>(nowPage-1)*pageItem && item.id<=nowPage*pageItem){
+                                    arr4.push(item);
+                                }
+                            })
+                            _this.renderthree(arr4);
+                        }else if($target.is(".prev")){
+                            // 点击上一个按钮的事件
+                            $(".click-page").each(function(){
+                                $(this).removeClass("active")
+                            })
+                            if(--nowPage<1) nowPage=1;
+                            $(".click-page").eq(nowPage-1).addClass("active")
+                            var arr5=[];
+                            arr.forEach(function(item){
+                                if(item.id>(nowPage-1)*pageItem && item.id<=nowPage*pageItem){
+                                    arr5.push(item);
+                                }
+                            })
+                            _this.renderthree(arr5);
+                        }
+                    })
                 })
             }
             // 把数据放到页面当中
@@ -120,7 +202,7 @@ require(["require.config"], function () {
                         var objLeft = (screenWidth - obj.width())/2 ;
                         console.log(screenWidth);
                         console.log(screenHeight);
-                        var objTop = (screenHeight - obj.height())/2+$(window).scrollTop();
+                        var objTop = (screenHeight - obj.height())/2;
                       obj.css({left: objLeft + 'px', top: objTop + 'px'});
                     }
                     center();
@@ -170,7 +252,7 @@ require(["require.config"], function () {
                         "version":version,
                         "color":color,
                         "price":price,
-                        "num":1
+                        "num":num
                     }
                     var i;
                     var shopnum=localStorage.getItem("shopnum");

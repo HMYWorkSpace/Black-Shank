@@ -13,20 +13,24 @@
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <a href="" class="a1"></a>
+                <a href="javasript:;" class="a1"></a>
             </div>
             <div class="swiper-slide">
-                <a href="" class="a2"></a>
+                <a href="javasript:;" class="a2"></a>
             </div>
             <div class="swiper-slide">
-                <a href="" class="a3"></a>
+                <a href="javasript:;" class="a3"></a>
             </div>
             <div class="swiper-slide">
-                <a href="" class="a4"></a>
+                <a href="javasript:;" class="a4"></a>
             </div>
         </div>
         <!-- 如果需要分页器 -->
         <div class="swiper-pagination"></div>
+    </div>
+    <div class="fixed-car">
+        <a href="/html/car.html"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+        <b id="buy-num">0</b>
     </div>
     <main>
         <section class="shop-list">
@@ -56,7 +60,7 @@
     <footer id="footer-content"></footer>
     <script type="text/html" id="shoplist">
         {{each list item}}
-            <li>
+            <li data-id="{{item.id}}">
                 <a href="/html/shopdetails.html?id={{item.id}}">
                     <img src="{{item.img}}" alt="">
                     <p>{{item.title}}</p>
@@ -64,6 +68,7 @@
                     <p><b>￥</b>{{item.price}}</p>
                     <span>新品</span>
                 </a>
+                <button class="join-car">加入购物车</button>
             </li>
         {{/each}}
     </script>

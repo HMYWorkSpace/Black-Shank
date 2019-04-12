@@ -48,15 +48,37 @@
 }
 .head .content ol{
     display: flex;
-    align-items: center;
+}
+.head .content ol li{
+    line-height: 60px;
+    color: white;
+    margin-left: 15px;
 }
 .head .content ol li a span{
     font-size: 20px !important;
     color: white;
 }
-.head .content ol li:nth-child(1) a span{
-    margin-right: 25px;
-}
 .head .content ol li:hover span{
     color: #00ec00;
+}
+.login-status{
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+    a{
+        display: block;
+        width: 100%;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+    }
+    a:hover{
+        color: #00ec00;
+    }
 }

@@ -2,37 +2,38 @@ main{
     width: 100%;
     background: #f4f4f4;
     padding: 50px 0 100px;
-    // .car-content{
-    //     width: 1200px;
-    //     height: 536px;
-    //     margin: 0 auto;
-    //     background: white;
-    //     overflow: hidden;
-    //     p{
-    //         width: 100%;
-    //         text-align: center;
-    //         margin-top: 250px;
-    //         margin-bottom: 60px;
-    //         font-size: 18px;
-    //         color: #cccccc;
-    //     }
-    //     a{
-    //         display: block;
-    //         width: 170px;
-    //         height: 60px;
-    //         text-align: center;
-    //         line-height: 60px;
-    //         background: black;
-    //         color: white;
-    //         margin: 0 auto;
-    //         border-radius: 3px;
-    //     }
-    // }
+    .car-content{
+        width: 1200px;
+        height: 536px;
+        margin: 0 auto;
+        background: white;
+        overflow: hidden;
+        p{
+            width: 100%;
+            text-align: center;
+            margin-top: 250px;
+            margin-bottom: 60px;
+            font-size: 18px;
+            color: #cccccc;
+        }
+        a{
+            display: block;
+            width: 170px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            background: black;
+            color: white;
+            margin: 0 auto;
+            border-radius: 3px;
+        }
+    }
     .show-car{
         width: 1200px;
         background: white;
-        padding-top: 70px;
+        padding: 70px 0;
         margin: 0 auto;
+        margin-bottom: 30px;
         .chopper{
             width: 1040px;
             margin: 0 auto;
@@ -139,6 +140,37 @@ main{
                     outline: none;
                     background: white;
                 }
+            }
+        }
+    }
+    .settle-accounts{
+        width: 1200px;
+        height: 110px;
+        margin: 0 auto;
+        background: white;
+        .cacl-content{
+            width: 1040px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .right{
+            display: flex;
+            align-items: center;
+            span:nth-child(3){
+                color: #22b147;
+                font-size: 24px;
+            }
+            button{
+                width: 120px;
+                height: 40px;
+                border: none;
+                border-radius: 4px;
+                margin-left: 40px;
+                background: #22b147;
+                color: white;
             }
         }
        

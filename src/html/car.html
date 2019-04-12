@@ -11,20 +11,20 @@
 <body>
     <header id="header-content"></header>
     <main>
-        <!-- <div class="car-content">
+        <div class="car-content" id="car-content">
             <p>购物车竟然是空的,快去添加吧</p>
             <a href="/html/shoplist.html">去商城</a>
-        </div> -->
-        <div class="show-car">
+        </div>
+        <div class="show-car" id="show-car">
            <div class="chopper">
                 <h4>我的购物车</h4>
                 <table>
                     <thead>
                         <tr>
                             <th>
-                                <input type="checkbox" class="allcheck" id="allcheck">
+                                <input type="checkbox" class="allcheck" id="allcheck" checked="checked">
                                 <label for="allcheck" class="special">
-                                    <span class="all-state"></span>
+                                    <span class="all-state checked-state"></span>
                                     <b>全选</b>
                                 </label>
                             </th>
@@ -36,48 +36,7 @@
                         </tr>
                     </thead>
                     <tbody id="tbody">
-                        <!-- <tr>
-                            <td>
-                                <input type="checkbox" class="check" id="check-0">
-                                <label for="check-0">
-                                    <span class="choose-state"></span>
-                                </label>
-                            </td>
-                            <td class="need-dis">
-                                <div class="left-img">
-                                    <img src="/img/5.jpg" alt="">
-                                </div>
-                                <div class="right-name">
-                                    <p>我在哪</p>
-                                    <p>我是谁我要干什么</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="buy-num">       
-                                    <button>-</button>
-                                    <i>1</i>
-                                    <button>+</button>
-                                </div>
-                            </td>
-                            <td><i>￥3799</i></td>
-                            <td>待付款</td>
-                            <td>
-                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="checkbox" class="check" id="check-1">
-                                <label for="check-1">
-                                    <span class="choose-state"></span>
-                                </label>
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr> -->
+                        <!-- 请求的假数据动态渲染 -->
                     </tbody>
                 </table>
                 <div class="modal-center" id="modal-center">
@@ -87,7 +46,23 @@
                         <button id="cel-btn">在想想</button>
                     </div>
                 </div>
+                <div class="modal-center" id="modal-center1">
+                    <p>确定删除商品?</p>
+                    <div>
+                        <button id="ok-btn1">确定</button>
+                        <button id="cel-btn1">在想想</button>
+                    </div>
+                </div>
            </div>
+        </div>
+        <div class="settle-accounts" id="settle-accounts">
+            <div class="cacl-content">
+                <a href="/html/shoplist.html"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>继续购物</a>
+                <div class="right">
+                    共<span id="allnum">1</span>件商品,已选<span id=choosenum>2</span>件,合计:<span id="allmoney">￥70</span>
+                    <button>去结算</button>
+                </div>
+            </div>
         </div>
     </main>
     <footer id="footer-content"></footer>

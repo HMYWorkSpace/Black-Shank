@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="/lib/require.js" data-main="/js/register.js"></script>
     <link rel="stylesheet" href="/css/register.css">
 </head>
 <body>
@@ -14,19 +13,20 @@
         <div class="register-form">
             <h3>注册</h3>
             <form action="">
-                <input type="text" placeholder="请输入手机号">
-                <input type="text" placeholder="请输入验证码">
-                <button>获取验证码</button>
-                <input type="password" placeholder="请输入密码">
-                <input type="password" placeholder="请确认密码">
+                <input type="text" placeholder="请输入手机号" id="phonenumber">
+                <input type="text" placeholder="请输入验证码" id="input-code">
+                <button id="get-vcode">获取验证码</button>
+                <input type="password" placeholder="请输入密码" id="password">
+                <input type="password" placeholder="请确认密码" id="confirm">
                 <a href="/html/login.html">账号登录</a>
-                <button type="submit" class="reg-btn">注册</button>
-               <p> <input type="checkbox"><span>我已阅读并接受《黑鲨服务协议》</span></p>
+                <button type="submit" class="reg-btn" id="reg-btn" disabled="true">注册</button>
+               <p> <input type="checkbox" id="btn"><span>我已阅读并接受《黑鲨服务协议》</span></p>
             </form>
         </div>
     </main>
     <footer>
         <p>Copyright © 2017-2018 BlackShark 赣ICP备17012659号. All Rights Reserved.</p>
     </footer>
+    <script src="/lib/require.js" data-main="/js/register.js"></script>
 </body>
 </html>

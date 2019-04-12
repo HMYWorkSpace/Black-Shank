@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="/lib/require.js" data-main="/js/login.js"></script>
     <link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
@@ -15,9 +14,9 @@
         <div class="login-form">
             <h3>账号登录</h3>
             <form action="">
-                <input type="text" placeholder="请输入手机号">
-                <input type="password" placeholder="请输入密码">
-                <button type="submit" class="reg-btn">登录</button>
+                <input type="text" placeholder="请输入手机号" id="phonenumber">
+                <input type="password" placeholder="请输入密码" id="password">
+                <button type="submit" class="reg-btn" id="log-btn">登录</button>
                 <p><a href="/html/login.html">立即注册&nbsp;</a><a href="javascript">|&nbsp;忘记密码</a></p> 
             </form>
             <div class="login-other">
@@ -30,5 +29,6 @@
     <footer>
         <p>Copyright © 2017-2018 BlackShark 赣ICP备17012659号. All Rights Reserved.</p>
     </footer>
+    <script src="/lib/require.js" data-main="/js/login.js"></script>
 </body>
 </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.3">
@@ -35,20 +34,20 @@
                         <!-- 外部请求的数据 -->
                     </div>
                     <nav aria-label="Page navigation" class="page-nav">
-                        <ul class="pagination">
-                            <li>
-                                <a href="#" aria-label="Previous">
-                                    <span aria-hidden="true">上一页</span>
+                        <ul class="pagination" id="pagination">
+                            <li id="prev-page">
+                                <a href="javasript:;" aria-label="Previous" class="prev">
+                                    <span aria-hidden="true" class="prev">上一页</span>
                                 </a>
                             </li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li>
-                                <a href="#" aria-label="Next">
-                                    <span aria-hidden="true">下一页</span>
+                            <!-- <li><a href="javasript:;">1</a></li>
+                            <li><a href="javasript:;">2</a></li>
+                            <li><a href="javasript:;">3</a></li>
+                            <li><a href="javasript:;">4</a></li>
+                            <li><a href="javasript:;">5</a></li> -->
+                            <li id="next-page">
+                                <a href="javasript:;" aria-label="Next" class="next">
+                                    <span aria-hidden="true" class="next">下一页</span>
                                 </a>
                             </li>
                         </ul>
@@ -113,7 +112,7 @@
                     <p><i>赠品</i>{{active[0]}}</p>
                     <p><i>减价</i>{{active[1]}}</p>
                 </div>
-                <a href="">以旧换新</a>
+                <a href="javasript:;">以旧换新</a>
                 <!-- 开始选择商品的样式 -->
                 <div class="shop-choose">
                     <div class="version every">
